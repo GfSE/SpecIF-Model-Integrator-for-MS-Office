@@ -10,8 +10,8 @@ The code was written on Visual Studio 2017 RC.
 - At least Windows Vista with 1-GHz and 512 MB RAM.
 
 ## Instructions
-1. To open the project click on "SpecIF.vbproj"
-2. To open the .exe go to SpecIF/bin/Debug/SpecIF.exe
+1. To use the program start "SpecIF/bin/Debug/SpecIF.exe"
+2. To open the project click on "SpecIF.vbproj"
 3. To read the code start with Interface.vb, then MainSpecIF.vb
    More code is found in the folders Informations, Models, SpecIFFolder.
 
