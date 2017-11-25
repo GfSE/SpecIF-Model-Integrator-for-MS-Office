@@ -183,7 +183,7 @@ Module Requirements
         reqColumnTitle = New Collection 'Liste von allen Spalteninhalte
         reqColumnAT = New Collection 'Liste der Anforderungsid. Wird synchron mit reqColumnTitle gebildet.
 
-        Do While xlWorkSheet.Cells(1, i).value <> "" 'Spalten müssen konsitent sein. Bei einer leeren Spalte wird hier abgebrochen.
+        Do While xlWorkSheet.Cells(1, i).value <> "" 'Spalten müssen konsistent sein. Bei einer leeren Spalte wird hier abgebrochen.
             title = xlWorkSheet.Cells(1, i).value
             Dim comp As StringComparison = StringComparison.OrdinalIgnoreCase
             If XlTitle.Contains(title.ToLower()) Then 'Wenn Spalte z.B. Titel heißt, wird dies zu dcterms:title. Es ist Pflicht einen Titel anzugeben.

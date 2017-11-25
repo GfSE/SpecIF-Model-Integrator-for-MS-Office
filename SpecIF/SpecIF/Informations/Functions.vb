@@ -648,7 +648,7 @@ Module Functions
     '       Quellort     : Aus allen Modellen.
     '    ---------------------------------------------------------------------------------------
     Public Sub AddObjectState(id As String, name As String, text As String)
-        If IsNullOrBlank(name) Then Throw New System.Exception("Es fehlt der Text bzw. die Beschreibung in einem Modellelement. Bitte nicht leer lassen.")
+        If IsNullOrBlank(name) Then Throw New System.Exception("Es fehlt die Bezeichnung in einem Modellelement. Bitte ergänzen.")
         ProjectData.ObjekteDS = ProjectData.ObjekteDS & "{" & vbCrLf &
         "        ""id"": """ & id & """," & vbCrLf &
         "        ""title"": """ & name & """," & vbCrLf &

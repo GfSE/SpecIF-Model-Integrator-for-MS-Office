@@ -8,14 +8,14 @@ Imports Excel = Microsoft.Office.Interop.Excel
 '       Quellort: Modul Interface.vb mit der Sub-Anweisung MainSpecIFSub.  
 '    ---------------------------------------------------------------------------------------
 Module MainSpecIF
-    'Zählt alle erzeugte Elemente und gibt diese als Konsole aus.
-    'Wichtig für Messung der kritischen Elemente. Wieviel kann der Browser aufnehmen.
+    'GLOBAL VARIABLES:
+    'countElements zählt alle erzeugten Elemente und gibt diese auf der Konsole aus.
+    'Wichtig für Messung der kritischen Elemente. Wieviel kann der Browser aufnehmen?
     'Ein Element wird in den jeweiligen Modellmodulen erzeugt. 
-    'Für eine einfache Berechnung. Wird dieser Wert beim Generieren einer ID erhöht.
+    'Für eine einfache Berechnung. Dieser Wert wird beim Generieren einer ID erhöht.
     'Erhört von Public Function GetGenID(cb As Integer) As String in Functions.vb
     Public countElements As Integer
     'ProjectData enthält sämtliche Informationen des Projektes, wie ID, Name usw.
-    'ProjectData ist Public und somit einlesbar für alle Module.
     'Darüber hinaus enthält die Klasse temporäre Speichermöglichkeiten für die Objekte, Relationen, Hierarchie und das Integrationsmodell. 
     Public ProjectData As New Datastructur
     'Bei der Abstraktion der Modellelemente werden diese in der Gesamtliste "Modelelements" gespeichert.
@@ -87,7 +87,7 @@ Module MainSpecIF
                         'Anschließend wird das entsprechende Diagrammtyp-Modul geladen.
                         'Das Ergebnis ist eine Teilintegration mit Hilfe der 4 Prinzipien der Modellintegration (siehe specif.de)
                         WriteProgressbar(loopCount * (50 \ modelPaths.Count), True)
-                        If ExecuteModel(modelPath) Then 'Modell wird hier analysiert und integriert. Nur weiter machen, kein Fehler auftritt.
+                        If ExecuteModel(modelPath) Then 'Modell wird hier analysiert und integriert. Nur weiter machen, wenn kein Fehler auftritt.
                             JoinSpecIFBaseWithProjectData() 'Ermittelte Objekte/Relationen/Hierarchien werden zum gesamt Modell hinzugefügt.
                             If modelName = ProjectData.modelName(UBound(ProjectData.modelName)) Then
                                 JoinMElHierarchie() 'Fügt Modellelemente in die Hierarchie ein.
@@ -147,7 +147,7 @@ Module MainSpecIF
                 SendError(ex.Message, -1)
             End Try
             Try
-                If iXl > 0 Then Throw New System.Exception("Nur eine Anforderung ist erlaubt.")
+                If iXl > 0 Then Throw New System.Exception("Nur eine Datei mit Anforderungen ist erlaubt.")
                 ExecuteModel = RequirementsAnalyse(xlWorkBook) 'Excel wird auf Anforderung analysiert.
                 iXl = iXl + 1
             Catch ex As Exception
