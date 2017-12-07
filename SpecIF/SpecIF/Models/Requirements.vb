@@ -3,8 +3,8 @@
 '       Modul   : Requirements
 '       Datum   : 29.04.2017
 '       Author  : Philipp Mochine
-'       Zweck   : Anforderungen aus einer Excelliste werden eingelesen und in das Integrationsmodell hinzugefügt.
-'                 Beziehungen zwischen Anforderungen und Funktionshierarchie werden hier automatisch gesetzt.
+'       Zweck   : Anforderungen aus einer Excelliste werden eingelesen und in das Integrationsmodell eingefügt.
+'                 Beziehungen zwischen Anforderungen und Funktionshierarchie werden automatisch gesetzt.
 '       Quellort: Von ExecuteModel(modelPath As String)
 '    ---------------------------------------------------------------------------------------
 Module Requirements

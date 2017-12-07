@@ -2,3 +2,5 @@
 *.cache
 SpecIF/.vs/SpecIF/v15/Server/sqlite3/storage.ide
 SpecIF/.vs/SpecIF/v15/Server/sqlite3/db.lock
+*.ide-shm
+*.ide-wal
