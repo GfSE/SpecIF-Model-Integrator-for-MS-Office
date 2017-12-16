@@ -1,5 +1,5 @@
 # SpecIF-Model-Integrator-for-MS-Office
-Using this VBA desktop application, you may select MS-Office files and integrate them to a single SpecIF file in JSON notation. Diagrams are analyzed and all model-elements plus their semantic relations are identified.
+Using this VBA desktop application, you may select MS-Office files and integrate them to a single [SpecIF](http://specif.de) file in JSON notation. Diagrams are analyzed and all model-elements plus their semantic relations are identified.
 
 The code was written on Visual Studio 2017 RC.
 
