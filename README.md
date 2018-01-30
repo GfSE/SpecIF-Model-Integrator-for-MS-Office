@@ -9,8 +9,8 @@ The code was written on Visual Studio 2017 RC.
 - Microsoft .Net Framework 4.5.2
 
 ## Instructions
-1. To use the program start "SpecIF/bin/Debug/SpecIF.exe"
-2. To open the project click on "SpecIF.vbproj"
+1. To use the program: Start "SpecIF/bin/Debug/SpecIF.exe"
+2. To open the project for development: Click on "SpecIF.vbproj"
 3. To read the code start with Interface.vb, then MainSpecIF.vb
    More code is found in the folders Informations, Models, SpecIFFolder.
 
